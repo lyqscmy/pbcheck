@@ -13,7 +13,9 @@ Table of Contents
 
 # DESCRIPTION
 
-TODO
+proto-gen-go生成的file.pb.go中的结构体每个字段都有Getter方法，方法处理了receiver为nil的情况，所以是推荐使用。但是在编码时程序员可能图方便直接foo.bar使用字段。
+
+pbcheck检查在读的场景没有使用Getter方法，而是直接读指针的用法。
 
 # PREREQUISITES
 
